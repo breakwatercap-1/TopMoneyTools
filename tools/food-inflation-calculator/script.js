@@ -78,7 +78,7 @@ function calculateInflation() {
     Date: ${entry.date}
   `;
 }
-
+//
 // -------------------------------
 // Initialize Page
 // -------------------------------
