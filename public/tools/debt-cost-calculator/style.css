@@ -243,7 +243,7 @@ select:focus {
   margin-top: 2rem;
   padding: 1.5rem;
   border-radius: var(--radius);
-  background: #f0f5ff;
+  background: #fffbf0;
   border-left: 4px solid var(--border);
   transition: all 0.3s ease;
 }
@@ -275,7 +275,7 @@ select:focus {
 /* Severity Card State Colors */
 
 .result.green {
-  background: #e8f5e9;
+  background: #f0f8f5;
   border-left-color: var(--green);
 }
 
@@ -284,7 +284,7 @@ select:focus {
 }
 
 .result.orange {
-  background: #fff3e0;
+  background: #fffbf0;
   border-left-color: var(--orange);
 }
 
@@ -293,7 +293,7 @@ select:focus {
 }
 
 .result.red {
-  background: #ffebee;
+  background: #fff5f5;
   border-left-color: var(--red);
 }
 
