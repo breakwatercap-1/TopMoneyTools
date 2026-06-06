@@ -1,0 +1,112 @@
+{
+  "countries": [
+    {
+      "code": "NL",
+      "name": "Netherlands",
+      "value": 4.2,
+      "date": "2025-12-01"
+    },
+    {
+      "code": "US",
+      "name": "United States",
+      "value": 3.8,
+      "date": "2025-12-01"
+    },
+    {
+      "code": "DE",
+      "name": "Germany",
+      "value": 3.1,
+      "date": "2025-12-01"
+    },
+    {
+      "code": "FR",
+      "name": "France",
+      "value": 3.5,
+      "date": "2025-12-01"
+    },
+    {
+      "code": "GB",
+      "name": "United Kingdom",
+      "value": 4.7,
+      "date": "2025-12-01"
+    },
+    {
+      "code": "CA",
+      "name": "Canada",
+      "value": 2.9,
+      "date": "2025-12-01"
+    },
+    {
+      "code": "AU",
+      "name": "Australia",
+      "value": 2.4,
+      "date": "2025-12-01"
+    },
+    {
+      "code": "JP",
+      "name": "Japan",
+      "value": 2.1,
+      "date": "2025-12-01"
+    },
+    {
+      "code": "IN",
+      "name": "India",
+      "value": 5.8,
+      "date": "2025-12-01"
+    },
+    {
+      "code": "BR",
+      "name": "Brazil",
+      "value": 4.2,
+      "date": "2025-12-01"
+    },
+    {
+      "code": "MX",
+      "name": "Mexico",
+      "value": 5.5,
+      "date": "2025-12-01"
+    },
+    {
+      "code": "ES",
+      "name": "Spain",
+      "value": 3.2,
+      "date": "2025-12-01"
+    },
+    {
+      "code": "IT",
+      "name": "Italy",
+      "value": 3.0,
+      "date": "2025-12-01"
+    },
+    {
+      "code": "SE",
+      "name": "Sweden",
+      "value": 2.7,
+      "date": "2025-12-01"
+    },
+    {
+      "code": "CH",
+      "name": "Switzerland",
+      "value": 1.8,
+      "date": "2025-12-01"
+    },
+    {
+      "code": "KR",
+      "name": "South Korea",
+      "value": 2.3,
+      "date": "2025-12-01"
+    },
+    {
+      "code": "SG",
+      "name": "Singapore",
+      "value": 2.6,
+      "date": "2025-12-01"
+    },
+    {
+      "code": "ZA",
+      "name": "South Africa",
+      "value": 3.9,
+      "date": "2025-12-01"
+    }
+  ]
+}
