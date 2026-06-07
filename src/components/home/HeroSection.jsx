@@ -1,60 +1,99 @@
 import { Link } from 'react-router-dom';
-import { ArrowRight, TrendingDown, CreditCard } from 'lucide-react';
+import { ArrowRight, TrendingDown, CreditCard, ShieldCheck } from 'lucide-react';
+
+const stats = [
+  { value: '2 tools', label: 'Free to use' },
+  { value: '0 sign-ups', label: 'No account needed' },
+  { value: '100%', label: 'Runs in your browser' },
+];
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-[90vh] flex flex-col items-center justify-center px-6 py-24 overflow-hidden">
-      {/* Background radial glow */}
+    <section className="relative flex flex-col items-center justify-center px-6 pt-28 pb-24 overflow-hidden">
+
+      {/* Deep radial glow — warm gold bloom */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
-          background: 'radial-gradient(ellipse 70% 50% at 50% 40%, rgba(212,175,55,0.07) 0%, transparent 70%)',
+          background:
+            'radial-gradient(ellipse 80% 60% at 50% 30%, rgba(212,175,55,0.09) 0%, rgba(212,175,55,0.03) 45%, transparent 70%)',
         }}
       />
 
-      {/* Hero image - coin on dark stone */}
-      <div className="absolute inset-0 pointer-events-none opacity-10">
-        <img
-          src="https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?w=1600&q=80&auto=format&fit=crop"
-          alt=""
-          aria-hidden="true"
-          className="w-full h-full object-cover object-center"
-        />
-        <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom, #070707 0%, rgba(7,7,7,0.6) 50%, #070707 100%)' }} />
-      </div>
+      {/* Subtle grain texture overlay */}
+      <div
+        className="absolute inset-0 pointer-events-none opacity-20"
+        style={{
+          backgroundImage:
+            'url("https://images.unsplash.com/photo-1501854140801-50d01698950b?w=1600&q=20&auto=format&fit=crop")',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          mixBlendMode: 'overlay',
+          filter: 'grayscale(100%)',
+        }}
+      />
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background: 'linear-gradient(to bottom, #070707 0%, rgba(7,7,7,0) 30%, rgba(7,7,7,0) 70%, #070707 100%)',
+        }}
+      />
 
+      {/* Content */}
       <div className="relative z-10 max-w-4xl mx-auto text-center">
-        {/* Eyebrow */}
+
+        {/* Trust pill */}
         <div
-          className="inline-flex items-center gap-2 mb-8 px-4 py-2 rounded-full"
-          style={{ border: '1px solid rgba(212,175,55,0.25)', background: 'rgba(212,175,55,0.06)' }}
+          className="inline-flex items-center gap-2 mb-10 px-5 py-2 rounded-full"
+          style={{ border: '1px solid rgba(212,175,55,0.28)', background: 'rgba(212,175,55,0.07)' }}
         >
-          <span className="label-caps gold-text">Simple · Free · Private</span>
+          <ShieldCheck className="w-4 h-4" style={{ color: '#D4AF37' }} />
+          <span className="label-caps gold-text tracking-widest">Free · Private · No jargon</span>
         </div>
 
-        {/* Headline */}
+        {/* Main headline */}
         <h1
           className="font-heading text-white mb-6"
-          style={{ fontSize: 'clamp(2.5rem, 7vw, 4.5rem)', lineHeight: 1.1, fontWeight: 700 }}
+          style={{ fontSize: 'clamp(2.75rem, 7.5vw, 5rem)', lineHeight: 1.08, fontWeight: 700 }}
         >
-          Money, finally{' '}
-          <span className="gold-text">explained clearly.</span>
+          Finally understand
+          <br />
+          <span
+            style={{
+              color: '#D4AF37',
+              textShadow: '0 0 60px rgba(212,175,55,0.35), 0 0 120px rgba(212,175,55,0.12)',
+            }}
+          >
+            your money.
+          </span>
         </h1>
 
-        {/* Sub */}
-        <p className="text-silver mb-12 max-w-2xl mx-auto" style={{ fontSize: '1.125rem', lineHeight: 1.7 }}>
-          Free calculators that turn confusing financial questions into clear, honest answers.
-          No sign-up. No jargon. No agenda — just numbers you can actually use.
+        {/* Subheadline — warm, friendly, zero jargon */}
+        <p
+          className="text-silver mb-6 max-w-2xl mx-auto"
+          style={{ fontSize: 'clamp(1rem, 2.2vw, 1.2rem)', lineHeight: 1.75 }}
+        >
+          We built two simple tools to answer the questions most people are too embarrassed to Google.
+          <br className="hidden sm:block" />
+          How much is inflation really costing you at the supermarket? What does your loan actually cost in total?
         </p>
 
-        {/* CTAs */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <p
+          className="mb-12 max-w-xl mx-auto"
+          style={{ fontSize: '1rem', lineHeight: 1.6, color: 'rgba(209,209,209,0.6)' }}
+        >
+          Type in a number. Get a clear answer. No account, no email, no nonsense.
+        </p>
+
+        {/* CTA buttons */}
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-20">
           <Link
             to="/tools/food-inflation"
-            className="btn-gold inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl text-base font-semibold animate-pulse-gold"
+            className="btn-gold inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl text-base font-semibold"
+            style={{ boxShadow: '0 0 32px rgba(212,175,55,0.25)' }}
           >
             <TrendingDown className="w-5 h-5" />
-            Inflation Calculator
+            How much is food inflation costing me?
             <ArrowRight className="w-4 h-4" />
           </Link>
           <Link
@@ -62,14 +101,27 @@ export default function HeroSection() {
             className="btn-ghost-gold inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl text-base"
           >
             <CreditCard className="w-5 h-5" />
-            Debt Cost Calculator
+            What does my loan really cost?
           </Link>
+        </div>
+
+        {/* Stat strip */}
+        <div
+          className="inline-flex flex-col sm:flex-row gap-0 divide-y sm:divide-y-0 sm:divide-x rounded-2xl overflow-hidden"
+          style={{ border: '1px solid rgba(212,175,55,0.15)', background: 'rgba(18,18,18,0.7)', backdropFilter: 'blur(10px)', divideColor: 'rgba(212,175,55,0.12)' }}
+        >
+          {stats.map(s => (
+            <div key={s.label} className="px-8 py-5 flex flex-col items-center gap-1" style={{ borderColor: 'rgba(212,175,55,0.12)' }}>
+              <span className="font-heading font-bold text-white text-xl" style={{ color: '#D4AF37' }}>{s.value}</span>
+              <span className="label-caps" style={{ fontSize: '0.7rem', letterSpacing: '0.12em' }}>{s.label}</span>
+            </div>
+          ))}
         </div>
       </div>
 
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-40">
-        <div className="w-px h-12" style={{ background: 'linear-gradient(to bottom, rgba(212,175,55,0.6), transparent)' }} />
+      {/* Gold scroll line */}
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 opacity-30">
+        <div className="w-px h-10" style={{ background: 'linear-gradient(to bottom, #D4AF37, transparent)' }} />
       </div>
     </section>
   );
