@@ -3,6 +3,22 @@ import PageLayout from '@/components/layout/PageLayout';
 import CalcInput from '@/components/calculators/CalcInput';
 import ResultShield from '@/components/calculators/ResultShield';
 import { TrendingDown, Info } from 'lucide-react';
+import ResultExplainer from '@/components/calculators/ResultExplainer';
+
+const INFLATION_EXPLAINER = [
+  {
+    title: 'Inflation compounds — just like interest',
+    body: 'If food prices rise 4% this year, next year\'s 4% applies to the already-higher price. Each year builds on the last, which is why even modest inflation adds up dramatically over time.',
+  },
+  {
+    title: 'Your salary has to keep up',
+    body: 'If food costs 20% more in 5 years but your pay doesn\'t rise, you\'ve effectively taken a pay cut. Inflation is a hidden reduction in what your money can actually buy.',
+  },
+  {
+    title: 'Food inflation ≠ general inflation',
+    body: 'The headline inflation figure covers everything from rent to electronics. Food prices often rise faster — especially for staples like bread, dairy, and vegetables — so your grocery bill can outpace the official number.',
+  },
+];
 
 const COUNTRY_RATES = [
   { label: 'United States', rate: 3.5 },
@@ -177,6 +193,8 @@ export default function FoodInflationCalculator() {
         <p className="text-center text-xs text-muted-foreground mt-6">
           Results are estimates for educational purposes only. Actual inflation rates may vary.
         </p>
+
+        <ResultExplainer items={INFLATION_EXPLAINER} />
       </div>
 
       {/* Contextual image */}

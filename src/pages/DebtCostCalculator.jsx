@@ -3,6 +3,22 @@ import PageLayout from '@/components/layout/PageLayout';
 import CalcInput from '@/components/calculators/CalcInput';
 import ResultShield from '@/components/calculators/ResultShield';
 import { CreditCard, Info } from 'lucide-react';
+import ResultExplainer from '@/components/calculators/ResultExplainer';
+
+const DEBT_EXPLAINER = [
+  {
+    title: 'Interest is the price of borrowing',
+    body: 'When a lender gives you money, they charge a fee for the service. That fee is interest — calculated as a percentage of what you owe, every single year until it\'s paid off.',
+  },
+  {
+    title: 'Why longer loans cost more',
+    body: 'A 5-year loan at 8% charges that 8% on your outstanding balance each year. The longer you take to repay, the more years the lender collects their fee — even if the rate never changes.',
+  },
+  {
+    title: 'The difference between rate and cost',
+    body: 'A "low" interest rate of 5% on a £20,000 loan over 10 years still adds thousands in interest. The rate tells you the speed; the term tells you the distance. Both determine the total cost.',
+  },
+];
 
 function fmt(n) {
   return '$' + n.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
@@ -174,6 +190,8 @@ export default function DebtCostCalculator() {
         <p className="text-center text-xs text-muted-foreground mt-6">
           Results use standard amortization formula. For educational purposes only. Actual loan costs may include fees not shown here.
         </p>
+
+        <ResultExplainer items={DEBT_EXPLAINER} />
       </div>
 
       {/* Contextual image */}
