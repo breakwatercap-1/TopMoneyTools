@@ -16,6 +16,7 @@ import Privacy from '@/pages/Privacy';
 import Terms from '@/pages/Terms';
 import Disclaimer from '@/pages/Disclaimer';
 import Education from '@/pages/Education';
+import Glossary from '@/pages/Glossary';
 
 const AuthenticatedApp = () => {
   const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } = useAuth();
@@ -48,6 +49,7 @@ const AuthenticatedApp = () => {
       <Route path="/terms" element={<Terms />} />
       <Route path="/disclaimer" element={<Disclaimer />} />
       <Route path="/education" element={<Education />} />
+      <Route path="/glossary" element={<Glossary />} />
       <Route path="*" element={<PageNotFound />} />
     </Routes>
   );
