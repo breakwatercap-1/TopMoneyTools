@@ -5,6 +5,7 @@ import { Menu, X, Shield } from 'lucide-react';
 const navLinks = [
   { label: 'Inflation', href: '/tools/food-inflation' },
   { label: 'Debt Cost', href: '/tools/debt-cost' },
+  { label: 'Education', href: '/education' },
   { label: 'About', href: '/about' },
   { label: 'Contact', href: '/contact' },
 ];
