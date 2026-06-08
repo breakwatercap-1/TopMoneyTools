@@ -43,7 +43,7 @@ module.exports = {
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',
-        gold: '#D4AF37',
+        gold: '#C9A84C',
         void: '#070707',
         core: '#121212',
         silver: '#D1D1D1',

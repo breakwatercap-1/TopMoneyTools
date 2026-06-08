@@ -26,9 +26,9 @@
     --input: 0 0% 10%;
     --ring: 43 61% 52%;
     --radius: 0.75rem;
-    --gold: #D4AF37;
-    --gold-dim: rgba(212, 175, 55, 0.15);
-    --gold-border: rgba(212, 175, 55, 0.25);
+    --gold: #C9A84C;
+    --gold-dim: rgba(201, 168, 76, 0.15);
+    --gold-border: rgba(201, 168, 76, 0.25);
     --void: #070707;
     --core: #121212;
     --silver: #D1D1D1;
@@ -105,18 +105,18 @@
 
 @layer utilities {
   .gold-text {
-    color: #D4AF37;
+    color: #C9A84C;
   }
 
   .gold-border {
-    border-color: rgba(212, 175, 55, 0.25);
+    border-color: rgba(201, 168, 76, 0.25);
   }
 
   .glass-card {
     background: rgba(18, 18, 18, 0.8);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(212, 175, 55, 0.15);
+    border: 1px solid rgba(201, 168, 76, 0.15);
   }
 
   .halo-glow {
@@ -127,32 +127,32 @@
     content: '';
     position: absolute;
     inset: -40px;
-    background: radial-gradient(ellipse at center, rgba(212, 175, 55, 0.12) 0%, transparent 70%);
+    background: radial-gradient(ellipse at center, rgba(201, 168, 76, 0.12) 0%, transparent 70%);
     pointer-events: none;
     border-radius: 50%;
   }
 
   .gold-rule {
-    border-color: rgba(212, 175, 55, 0.2);
+    border-color: rgba(201, 168, 76, 0.2);
   }
 
   .input-gold-focus {
-    border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+    border-bottom: 1px solid rgba(201, 168, 76, 0.3);
     transition: border-color 0.2s ease;
   }
 
   .input-gold-focus:focus {
-    border-bottom: 2px solid #D4AF37;
+    border-bottom: 2px solid #C9A84C;
     outline: none;
-    box-shadow: 0 2px 0 0 rgba(212, 175, 55, 0.3);
+    box-shadow: 0 2px 0 0 rgba(201, 168, 76, 0.3);
   }
 
   .result-glow {
-    text-shadow: 0 0 40px rgba(212, 175, 55, 0.4), 0 0 80px rgba(212, 175, 55, 0.15);
+    text-shadow: 0 0 40px rgba(201, 168, 76, 0.4), 0 0 80px rgba(201, 168, 76, 0.15);
   }
 
   .btn-gold {
-    background: #D4AF37;
+    background: #C9A84C;
     color: #070707;
     font-weight: 600;
     font-family: var(--font-body);
@@ -163,20 +163,20 @@
 
   .btn-gold:hover {
     background: #E0C050;
-    box-shadow: 0 0 24px rgba(212, 175, 55, 0.4);
+    box-shadow: 0 0 24px rgba(201, 168, 76, 0.4);
   }
 
   .btn-ghost-gold {
-    border: 1px solid rgba(212, 175, 55, 0.35);
-    color: #D4AF37;
+    border: 1px solid rgba(201, 168, 76, 0.35);
+    color: #C9A84C;
     font-weight: 500;
     transition: all 0.2s ease;
     min-height: 48px;
   }
 
   .btn-ghost-gold:hover {
-    background: rgba(212, 175, 55, 0.08);
-    border-color: #D4AF37;
+    background: rgba(201, 168, 76, 0.08);
+    border-color: #C9A84C;
   }
 
   .label-caps {
@@ -190,11 +190,11 @@
 
   .section-divider {
     border: none;
-    border-top: 1px solid rgba(212, 175, 55, 0.12);
+    border-top: 1px solid rgba(201, 168, 76, 0.12);
   }
 
   *:focus-visible {
-    outline: 2px solid #D4AF37;
+    outline: 2px solid #C9A84C;
     outline-offset: 4px;
   }
 }

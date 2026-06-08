@@ -1,4 +1,4 @@
-export default function ResultShield({ label, value, subtext, color = '#D4AF37' }) {
+export default function ResultShield({ label, value, subtext, color = '#C9A84C' }) {
   return (
     <div className="relative flex flex-col items-center text-center py-12 px-8">
       {/* Halo glow */}

@@ -22,13 +22,13 @@ export default function CalcInput({ label, id, value, onChange, type = 'number',
           className="w-full rounded-xl px-4 py-4 text-white font-semibold text-lg bg-transparent transition-all duration-200"
           style={{
             background: 'rgba(255,255,255,0.04)',
-            border: '1px solid rgba(212,175,55,0.2)',
+            border: '1px solid rgba(201,168,76,0.2)',
             paddingLeft: prefix ? '2.25rem' : '1rem',
             paddingRight: suffix ? '3rem' : '1rem',
             outline: 'none',
           }}
-          onFocus={e => { e.target.style.borderColor = '#D4AF37'; e.target.style.boxShadow = '0 0 0 3px rgba(212,175,55,0.1)'; }}
-          onBlur={e => { e.target.style.borderColor = 'rgba(212,175,55,0.2)'; e.target.style.boxShadow = 'none'; }}
+          onFocus={e => { e.target.style.borderColor = '#C9A84C'; e.target.style.boxShadow = '0 0 0 3px rgba(201,168,76,0.1)'; }}
+          onBlur={e => { e.target.style.borderColor = 'rgba(201,168,76,0.2)'; e.target.style.boxShadow = 'none'; }}
         />
         {suffix && (
           <span className="absolute right-4 text-muted-foreground font-medium pointer-events-none">

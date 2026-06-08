@@ -16,7 +16,7 @@ export default function HeroSection() {
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            'radial-gradient(ellipse 80% 60% at 50% 30%, rgba(212,175,55,0.09) 0%, rgba(212,175,55,0.03) 45%, transparent 70%)',
+            'radial-gradient(ellipse 80% 60% at 50% 30%, rgba(201,168,76,0.09) 0%, rgba(201,168,76,0.03) 45%, transparent 70%)',
         }}
       />
 
@@ -45,9 +45,9 @@ export default function HeroSection() {
         {/* Trust pill */}
         <div
           className="inline-flex items-center gap-2 mb-10 px-5 py-2 rounded-full"
-          style={{ border: '1px solid rgba(212,175,55,0.28)', background: 'rgba(212,175,55,0.07)' }}
+          style={{ border: '1px solid rgba(201,168,76,0.28)', background: 'rgba(201,168,76,0.07)' }}
         >
-          <ShieldCheck className="w-4 h-4" style={{ color: '#D4AF37' }} />
+          <ShieldCheck className="w-4 h-4" style={{ color: '#C9A84C' }} />
           <span className="label-caps gold-text tracking-widest">Free · Private · No jargon</span>
         </div>
 
@@ -60,8 +60,8 @@ export default function HeroSection() {
           <br />
           <span
             style={{
-              color: '#D4AF37',
-              textShadow: '0 0 60px rgba(212,175,55,0.35), 0 0 120px rgba(212,175,55,0.12)',
+              color: '#C9A84C',
+              textShadow: '0 0 60px rgba(201,168,76,0.35), 0 0 120px rgba(201,168,76,0.12)',
             }}
           >
             your money.
@@ -90,7 +90,7 @@ export default function HeroSection() {
           <Link
             to="/tools/food-inflation"
             className="btn-gold inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl text-base font-semibold"
-            style={{ boxShadow: '0 0 32px rgba(212,175,55,0.25)' }}
+            style={{ boxShadow: '0 0 32px rgba(201,168,76,0.25)' }}
           >
             <TrendingDown className="w-5 h-5" />
             How much is food inflation costing me?
@@ -108,11 +108,11 @@ export default function HeroSection() {
         {/* Stat strip */}
         <div
           className="inline-flex flex-col sm:flex-row gap-0 divide-y sm:divide-y-0 sm:divide-x rounded-2xl overflow-hidden"
-          style={{ border: '1px solid rgba(212,175,55,0.15)', background: 'rgba(18,18,18,0.7)', backdropFilter: 'blur(10px)', divideColor: 'rgba(212,175,55,0.12)' }}
+          style={{ border: '1px solid rgba(201,168,76,0.15)', background: 'rgba(18,18,18,0.7)', backdropFilter: 'blur(10px)', divideColor: 'rgba(201,168,76,0.12)' }}
         >
           {stats.map(s => (
-            <div key={s.label} className="px-8 py-5 flex flex-col items-center gap-1" style={{ borderColor: 'rgba(212,175,55,0.12)' }}>
-              <span className="font-heading font-bold text-white text-xl" style={{ color: '#D4AF37' }}>{s.value}</span>
+            <div key={s.label} className="px-8 py-5 flex flex-col items-center gap-1" style={{ borderColor: 'rgba(201,168,76,0.12)' }}>
+              <span className="font-heading font-bold text-white text-xl" style={{ color: '#C9A84C' }}>{s.value}</span>
               <span className="label-caps" style={{ fontSize: '0.7rem', letterSpacing: '0.12em' }}>{s.label}</span>
             </div>
           ))}
@@ -121,7 +121,7 @@ export default function HeroSection() {
 
       {/* Gold scroll line */}
       <div className="absolute bottom-6 left-1/2 -translate-x-1/2 opacity-30">
-        <div className="w-px h-10" style={{ background: 'linear-gradient(to bottom, #D4AF37, transparent)' }} />
+        <div className="w-px h-10" style={{ background: 'linear-gradient(to bottom, #C9A84C, transparent)' }} />
       </div>
     </section>
   );
