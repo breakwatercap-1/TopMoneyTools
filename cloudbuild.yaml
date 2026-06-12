@@ -1,13 +1,13 @@
+options:
+  logging: CLOUD_LOGGING_ONLY
+
 steps:
-  # 1. Build the container image
   - name: 'gcr.io/cloud-builders/docker'
     args: ['build', '-t', 'us-central1-docker.pkg.dev/$PROJECT_ID/my-website-image/my-website-image:latest', '.']
 
-  # 2. Push the image to Artifact Registry
   - name: 'gcr.io/cloud-builders/docker'
     args: ['push', 'us-central1-docker.pkg.dev/$PROJECT_ID/my-website-image/my-website-image:latest']
 
-  # 3. Deploy to Cloud Run (Update the service)
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
     entrypoint: 'gcloud'
     args:
@@ -18,4 +18,3 @@ steps:
       - '--region=us-central1'
       - '--platform=managed'
       - '--allow-unauthenticated'
-      options: logging: CLOUD_LOGGING_ONLY to cloudbuild.yaml
