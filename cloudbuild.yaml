@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 steps:
   # 1. Build the container image
   - name: 'gcr.io/cloud-builders/docker'
@@ -8,13 +9,41 @@ steps:
     args: ['push', 'us-central1-docker.pkg.dev/$PROJECT_ID/my-website-image/my-website-image:latest']
 
   # 3. Deploy to Cloud Run (Update the service)
+=======
+options:
+  logging: CLOUD_LOGGING_ONLY
+
+steps:
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - 'build'
+      - '-t'
+      - 'us-central1-docker.pkg.dev/$PROJECT_ID/my-website-image/my-website-image:$COMMIT_SHA'
+      - '.'
+
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - 'push'
+      - 'us-central1-docker.pkg.dev/$PROJECT_ID/my-website-image/my-website-image:$COMMIT_SHA'
+
+>>>>>>> 59e71e3 (Add Cloud Run deployment files to project root)
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
     entrypoint: 'gcloud'
     args:
       - 'run'
       - 'deploy'
       - 'my-website-service'
+<<<<<<< HEAD
       - '--image=us-central1-docker.pkg.dev/$PROJECT_ID/my-website-image/my-website-image:latest'
       - '--region=us-central1'
       - '--platform=managed'
       - '--allow-unauthenticated' # Set to --no-allow-unauthenticated for private
+=======
+      - '--image=us-central1-docker.pkg.dev/$PROJECT_ID/my-website-image/my-website-image:$COMMIT_SHA'
+      - '--region=us-central1'
+      - '--platform=managed'
+      - '--allow-unauthenticated'
+
+images:
+  - 'us-central1-docker.pkg.dev/$PROJECT_ID/my-website-image/my-website-image:$COMMIT_SHA'
+>>>>>>> 59e71e3 (Add Cloud Run deployment files to project root)
