@@ -1,0 +1,40 @@
+import Layout from "@/components/Layout";
+import SEO from "@/components/SEO";
+import AdSlot from "@/components/AdSlot";
+import { GLOSSARY } from "@/config/site.config";
+
+export default function Glossary() {
+  return (
+    <Layout>
+      <SEO title="Financial Glossary — 29 Plain-English Terms" description="Plain-English definitions of every term used across TopMoneyTools — inflation, interest, compound growth, amortization, net worth, APR, credit score and more." path="/glossary" />
+
+      <section className="mx-auto max-w-3xl px-4 py-12 sm:px-6">
+        <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-[#A3FFD6]/60">// Intel Brief</p>
+        <h1 className="mt-1 font-heading text-4xl font-bold tracking-tight text-[#E0E0E0]">Financial Glossary</h1>
+        <p className="mt-2 text-[#889988]">Plain-English definitions of the {GLOSSARY.length} terms used across our tools and articles.</p>
+
+        <div className="mt-6">
+          <AdSlot slot="top" className="h-[60px]" />
+        </div>
+
+        {/* Anchor link index */}
+        <nav aria-label="Glossary index" className="mt-8 flex flex-wrap gap-2">
+          {GLOSSARY.map((t) => (
+            <a key={t.slug} href={`#${t.slug}`} className="rounded-sm border border-[#A3FFD6]/25 px-2 py-1 font-mono text-[10px] uppercase tracking-[0.15em] text-[#889988] hover:text-[#A3FFD6]">
+              {t.term}
+            </a>
+          ))}
+        </nav>
+
+        <dl className="mt-8 space-y-3">
+          {GLOSSARY.map((t) => (
+            <div key={t.slug} id={t.slug} className="instrument-surface scroll-mt-24 rounded-sm p-5">
+              <dt className="font-heading text-lg font-semibold text-[#A3FFD6]">{t.term}</dt>
+              <dd className="mt-1 text-sm leading-relaxed text-[#E0E0E0]">{t.def}</dd>
+            </div>
+          ))}
+        </dl>
+      </section>
+    </Layout>
+  );
+}
