@@ -7,3 +7,5 @@ CoPilot Conversations.txt
 .vercel
 .env*
 service-account-key.jsonnode_modules/
+node_modules/
+**/node_modules/
