@@ -2,16 +2,38 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="https://base44.com/logo_v2.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="manifest" href="/manifest.json" />
     <title>TopMoneyTools — Privacy-First Financial Calculators</title>
-    <meta name="description" content="Ten free, private financial calculators covering inflation, debt, mortgages, retirement, budgeting, net worth and more — all run privately on your device." />
 
-    <!-- Google AdSense loader. Update ca-pub-XXXX to match PUBLISHER_ID in src/config/adsense.config.js,
-         and set ADS_ENABLED=true there once your Ad Unit IDs are in place. -->
-    <script async crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1540793589237523"></script>
+    <!-- Modern SVG favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon-tmt-bold.svg" />
+
+    <!-- PNG fallbacks -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32-bold.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16-bold.png" />
+
+    <!-- Legacy ICO fallback -->
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json" />
+
+    <meta
+      name="description"
+      content="Ten free, private financial calculators covering inflation, debt, mortgages, retirement, budgeting, net worth and more — all run privately on your device."
+    />
+
+    <!-- Google AdSense -->
+    <script
+      async
+      crossorigin="anonymous"
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1540793589237523"
+    ></script>
   </head>
+
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
