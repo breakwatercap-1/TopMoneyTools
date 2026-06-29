@@ -59,7 +59,6 @@ export default function EmergencyFundTool() {
           { q: "What are fixed expenses?", slug: "fixed-expenses" },
           { q: "What is financial resilience?", slug: "financial-resilience" },
         ]}
-        imageUrl="https://media.base44.com/images/public/6a3af32b5e42f665903b02b0/cf59c4ac3_generated_image.png"
         imageAlt="Glass jar of rolled banknotes beside a folded umbrella on a dark stone surface"
         imageCaption="Your financial safety net."
       />

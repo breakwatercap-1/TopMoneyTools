@@ -58,7 +58,6 @@ export default function SavingsRateTool() {
           { q: "What are fixed expenses?", slug: "fixed-expenses" },
           { q: "What are variable expenses?", slug: "variable-expenses" },
         ]}
-        imageUrl="https://media.base44.com/images/public/6a3af32b5e42f665903b02b0/fa9dbf0f9_generated_image.png"
         imageAlt="Open notebook with a hand-drawn progress line and stacked coins on a dark desk"
         imageCaption="Track your progress."
       />
