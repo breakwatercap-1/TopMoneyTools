@@ -142,7 +142,7 @@ export default function Home() {
           {[
             { e: "▮", t: "How Inflation Affects Your Daily Budget", d: "Why prices rise and how to stay ahead of them.", s: "how-inflation-affects-your-daily-budget" },
             { e: "▣", t: "Budgeting for Beginners (50/30/20)", d: "A simple method to bring balance and clarity to your spending.", s: "budgeting-for-beginners-50-30-20-rule-explained" },
-            { e: "◈", t: "How to Compare Loans", d: "The three numbers that matter most when choosing a loan.", s: "how-to-compare-loans-without-getting-confused" },
+            { e: "◈", t: "How to Compare Loans", d: "The three numbers that matter most when choosing a loan.", s: "how-to-compare-loans" },
           ].map((a) => (
             <Link key={a.s} to={`/education/${a.s}`} className="group instrument-surface rounded-sm p-5 transition hover:instrument-glow">
               <span aria-hidden="true" className="font-mono text-2xl text-[#A3FFD6]">{a.e}</span>

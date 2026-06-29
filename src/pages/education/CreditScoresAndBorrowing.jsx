@@ -198,7 +198,7 @@ export default function CreditScoresAndBorrowing() {
             </Link>
           </li>
           <li>
-            <Link to="/education/how-to-compare-loans-without-getting-confused" className="text-[#A3FFD6] hover:underline">
+            <Link to="/education/how-to-compare-loans" className="text-[#A3FFD6] hover:underline">
               How to Compare Loans
             </Link>
           </li>

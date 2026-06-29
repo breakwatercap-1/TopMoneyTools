@@ -67,7 +67,7 @@ export default function MortgageTool() {
           { title: "Interest compounds against you", body: "Each month interest is charged on the remaining balance. A small rate difference adds up to a large difference over 30 years." },
         ]}
         learnMore={[
-          { label: "Read: How to Compare Loans", to: "/education/how-to-compare-loans-without-getting-confused" },
+          { label: "Read: How to Compare Loans", to: "/education/how-to-compare-loans" },
           { label: "Glossary: Amortization", to: "/glossary#amortization" },
           { label: "Use: Debt Cost Calculator", to: "/tools/debt-cost" },
         ]}

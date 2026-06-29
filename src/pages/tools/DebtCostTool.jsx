@@ -53,7 +53,7 @@ export default function DebtCostTool() {
           { title: "Small rate differences add up", body: "A 2% lower rate on a large loan can save thousands over the lifetime. That's why it pays to shop around and improve your credit score before applying." },
         ]}
         learnMore={[
-          { label: "Read: How to Compare Loans", to: "/education/how-to-compare-loans-without-getting-confused" },
+          { label: "Read: How to Compare Loans", to: "/education/how-to-compare-loans" },
           { label: "Glossary: APR", to: "/glossary#apr" },
         ]}
         sidebarTerms={[

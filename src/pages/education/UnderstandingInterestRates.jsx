@@ -196,7 +196,7 @@ export default function UnderstandingInterestRates() {
         <h3 className="font-heading text-lg text-[#E0E0E0]">Read Next</h3>
         <ul className="mt-2 list-disc pl-6 text-[#889988]">
           <li>
-            <Link to="/education/how-to-compare-loans-without-getting-confused" className="text-[#A3FFD6] hover:underline">
+            <Link to="/education/how-to-compare-loans" className="text-[#A3FFD6] hover:underline">
               How to Compare Loans
             </Link>
           </li>
