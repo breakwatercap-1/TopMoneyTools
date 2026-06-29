@@ -238,3 +238,4 @@ export default function BudgetingForBeginners() {
       </div>
     </ArticleShell>
   );
+}
