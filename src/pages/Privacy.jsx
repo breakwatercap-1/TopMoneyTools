@@ -4,7 +4,14 @@ import SEO from "@/components/SEO";
 export default function Privacy() {
   return (
     <Layout>
-      <SEO title="Privacy Policy" description="TopMoneyTools does not store your inputs, track your activity, or require an account. All calculations run privately on your own device." path="/privacy" />
+      <SEO
+        title="Privacy Policy | TopMoneyTools"
+        description="TopMoneyTools does not store your inputs, track your activity, or require an account. All calculations run privately on your own device."
+        seoMeta={{
+          url: "https://topmoneytools.com/privacy",
+          type: "website",
+        }}
+      />
 
       <section className="mx-auto max-w-3xl px-4 py-12 sm:px-6">
         <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-[#A3FFD6]/60">// Privacy</p>

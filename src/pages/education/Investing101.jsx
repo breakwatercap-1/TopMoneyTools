@@ -45,6 +45,31 @@ const openGraphMeta = {
 };
 
 export default function Investing101() {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://topmoneytools.com",
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Education",
+        "item": "https://topmoneytools.com/education",
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Investing 101 — Compound Growth, Risk, and Time Explained",
+        "item": "https://topmoneytools.com/education/investing-101",
+      },
+    ],
+  };
+
   return (
     <ArticleShell
       title="Investing 101 — Compound Growth, Risk, and Time Explained"
@@ -63,7 +88,7 @@ export default function Investing101() {
         { label: "Retirement Calculator", to: "/tools/retirement" },
       ]}
       seoMeta={openGraphMeta}
-      structuredData={[structuredData, faqStructuredData]}
+      structuredData={[structuredData, faqStructuredData, breadcrumbSchema]}
     >
       <h2 className="mt-0 text-xl font-semibold text-[#E0E0E0]">Why investing matters</h2>
       <p className="text-[#889988]">

@@ -46,6 +46,31 @@ const openGraphMeta = {
 };
 
 export default function CreditScoresAndBorrowing() {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://topmoneytools.com",
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Education",
+        "item": "https://topmoneytools.com/education",
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Credit Scores & Borrowing — How Your Score Affects Rates and Approvals",
+        "item": "https://topmoneytools.com/education/credit-scores-and-borrowing",
+      },
+    ],
+  };
+
   return (
     <ArticleShell
       title="Credit Scores & Borrowing — How Your Score Affects Rates and Approvals"
@@ -64,7 +89,7 @@ export default function CreditScoresAndBorrowing() {
         { label: "Budget Planner", to: "/tools/budget-planner" },
       ]}
       seoMeta={openGraphMeta}
-      structuredData={[structuredData, faqStructuredData]}
+      structuredData={[structuredData, faqStructuredData, breadcrumbSchema]}
     >
       <h2 className="mt-0 text-xl font-semibold text-[#E0E0E0]">What your credit score represents</h2>
       <p className="text-[#889988]">

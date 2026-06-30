@@ -7,9 +7,36 @@ import { TOOLS } from "@/config/site.config";
 
 export default function ToolsIndex() {
   const disabled = [];
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://topmoneytools.com",
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Tools",
+        "item": "https://topmoneytools.com/tools",
+      },
+    ],
+  };
+
   return (
     <Layout>
-      <SEO title="All Tools" description="Browse every TopMoneyTools calculator — ten free, private financial instruments covering inflation, debt, mortgages, retirement, budgeting, net worth, savings goals and more." path="/tools" />
+      <SEO
+        title="All Tools | TopMoneyTools"
+        description="Browse every TopMoneyTools calculator — ten free, private financial instruments covering inflation, debt, mortgages, retirement, budgeting, net worth, savings goals and more."
+        seoMeta={{
+          url: "https://topmoneytools.com/tools",
+          type: "website",
+        }}
+        structuredData={[breadcrumbSchema]}
+      />
 
       <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6">
         <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-[#A3FFD6]/60">// The Tool Hangar</p>

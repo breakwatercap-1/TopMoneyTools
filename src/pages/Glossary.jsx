@@ -11,9 +11,51 @@ export default function Glossary() {
     return q ? GLOSSARY.filter((t) => t.term.toLowerCase().includes(q) || t.def.toLowerCase().includes(q)) : GLOSSARY;
   }, [query]);
 
+  const glossaryStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "DefinedTermSet",
+    "name": "TopMoneyTools Glossary",
+    "url": "https://topmoneytools.com/glossary",
+    "description":
+      "Plain-English definitions for key personal finance terms like interest, APR, inflation, amortization, and more.",
+    "hasDefinedTerm": GLOSSARY.map((term) => ({
+      "@type": "DefinedTerm",
+      "name": term.term,
+      "description": term.def,
+      "url": `https://topmoneytools.com/glossary#${term.slug}`,
+    })),
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://topmoneytools.com",
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Glossary",
+        "item": "https://topmoneytools.com/glossary",
+      },
+    ],
+  };
+
   return (
     <Layout>
-      <SEO title={`Financial Glossary — ${GLOSSARY.length} Plain-English Terms`} description="Plain-English definitions of every term used across TopMoneyTools — inflation, interest, compound growth, amortization, net worth, APR, credit score and more." path="/glossary" />
+      <SEO
+        title={`Financial Glossary — ${GLOSSARY.length} Plain-English Terms`}
+        description="Plain-English definitions of every term used across TopMoneyTools — inflation, interest, compound growth, amortization, net worth, APR, credit score and more."
+        seoMeta={{
+          url: "https://topmoneytools.com/glossary",
+          type: "website",
+        }}
+        structuredData={[glossaryStructuredData, breadcrumbSchema]}
+      />
 
       <section className="mx-auto max-w-3xl px-4 py-12 sm:px-6">
         <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-[#A3FFD6]/60">// Intel Brief</p>

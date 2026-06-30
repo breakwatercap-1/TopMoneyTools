@@ -48,6 +48,31 @@ const openGraphMeta = {
 };
 
 export default function BudgetingForBeginners() {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://topmoneytools.com",
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Education",
+        "item": "https://topmoneytools.com/education",
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Budgeting for Beginners — The 50/30/20 Rule Explained",
+        "item": "https://topmoneytools.com/education/budgeting-for-beginners-50-30-20-rule-explained",
+      },
+    ],
+  };
+
   return (
     <ArticleShell
       title="Budgeting for Beginners — The 50/30/20 Rule Explained"
@@ -66,7 +91,7 @@ export default function BudgetingForBeginners() {
         { label: "Emergency Fund Calculator", to: "/tools/emergency-fund" },
       ]}
       seoMeta={openGraphMeta}
-      structuredData={[structuredData, faqStructuredData]}
+      structuredData={[structuredData, faqStructuredData, breadcrumbSchema]}
     >
       <h2 className="mt-0 text-xl font-semibold text-[#E0E0E0]">
         A simple rule that makes budgeting easy

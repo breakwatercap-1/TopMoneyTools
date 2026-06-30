@@ -4,7 +4,7 @@ import Layout from "@/components/Layout";
 import SEO from "@/components/SEO";
 import AdSlot from "@/components/AdSlot";
 import Reveal from "@/components/Reveal";
-import { LIVE_TOOLS, FUTURE_TOOLS, SITE } from "@/config/site.config";
+import { LIVE_TOOLS, FUTURE_TOOLS } from "@/config/site.config";
 
 const FAQS = [
   { q: "Are these calculators really free?", a: "Yes. All instruments are completely free — no account, paywall, or upsell." },
@@ -20,10 +20,30 @@ const VALUES = [
   { t: "Built for Real Life", d: "From inflation to loan terms, we focus on the financial questions people face every day." },
 ];
 
+const websiteStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "TopMoneyTools",
+  "url": "https://topmoneytools.com",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://topmoneytools.com/search?q={search_term_string}",
+    "query-input": "required name=search_term_string",
+  },
+};
+
 export default function Home() {
   return (
     <Layout>
-      <SEO title="Privacy-First Financial Calculators & Plain-English Guides" path="/" />
+      <SEO
+        title="Privacy-First Financial Calculators & Plain-English Guides"
+        description="TopMoneyTools offers 10 free, private financial calculators for inflation, debt, mortgages, budgeting, and more — all running entirely in your browser with no accounts or tracking."
+        seoMeta={{
+          url: "https://topmoneytools.com/",
+          type: "website",
+        }}
+        structuredData={[websiteStructuredData]}
+      />
 
       {/* Hero — full-bleed */}
       <section className="relative overflow-hidden bg-obsidian">

@@ -5,7 +5,14 @@ import SEO from "@/components/SEO";
 export default function About() {
   return (
     <Layout>
-      <SEO title="About" description="TopMoneyTools is built for people who want to understand their finances without complexity or pressure — ten private calculators plus plain-English education, all on your device." path="/about" />
+      <SEO
+        title="About TopMoneyTools"
+        description="TopMoneyTools is built for people who want to understand their finances without complexity or pressure — ten private calculators plus plain-English education, all on your device."
+        seoMeta={{
+          url: "https://topmoneytools.com/about",
+          type: "website",
+        }}
+      />
 
       <section className="mx-auto max-w-3xl px-4 py-12 sm:px-6">
         <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-[#A3FFD6]/60">// Mission</p>

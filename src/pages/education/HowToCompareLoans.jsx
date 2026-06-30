@@ -45,6 +45,31 @@ const openGraphMeta = {
 };
 
 export default function HowToCompareLoans() {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://topmoneytools.com",
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Education",
+        "item": "https://topmoneytools.com/education",
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "How to Compare Loans Without Getting Confused",
+        "item": "https://topmoneytools.com/education/how-to-compare-loans",
+      },
+    ],
+  };
+
   return (
     <ArticleShell
       title="How to Compare Loans Without Getting Confused"
@@ -63,7 +88,7 @@ export default function HowToCompareLoans() {
         { label: "Budget Planner", to: "/tools/budget-planner" },
       ]}
       seoMeta={openGraphMeta}
-      structuredData={[structuredData, faqStructuredData]}
+      structuredData={[structuredData, faqStructuredData, breadcrumbSchema]}
     >
       <h2 className="mt-0 text-xl font-semibold text-[#E0E0E0]">Why loan comparison matters</h2>
       <p className="text-[#889988]">

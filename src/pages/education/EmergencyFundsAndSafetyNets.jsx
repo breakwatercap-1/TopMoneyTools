@@ -46,6 +46,31 @@ const openGraphMeta = {
 };
 
 export default function EmergencyFundsAndSafetyNets() {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://topmoneytools.com",
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Education",
+        "item": "https://topmoneytools.com/education",
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Emergency Funds & Financial Safety Nets — Protecting Yourself When Life Happens",
+        "item": "https://topmoneytools.com/education/emergency-funds-and-safety-nets",
+      },
+    ],
+  };
+
   return (
     <ArticleShell
       title="Emergency Funds & Financial Safety Nets — Protecting Yourself When Life Happens"
@@ -64,7 +89,7 @@ export default function EmergencyFundsAndSafetyNets() {
         { label: "Debt Payoff Calculator", to: "/tools/debt-payoff" },
       ]}
       seoMeta={openGraphMeta}
-      structuredData={[structuredData, faqStructuredData]}
+      structuredData={[structuredData, faqStructuredData, breadcrumbSchema]}
     >
       <h2 className="mt-0 text-xl font-semibold text-[#E0E0E0]">Why emergency funds matter</h2>
       <p className="text-[#889988]">

@@ -20,9 +20,36 @@ const EXTERNAL = [
 ];
 
 export default function Resources() {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://topmoneytools.com",
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Resources",
+        "item": "https://topmoneytools.com/resources",
+      },
+    ],
+  };
+
   return (
     <Layout>
-      <SEO title="Financial Resources" description="A curated collection of all ten TopMoneyTools calculators, ten plain-English guides, and trusted government references for confident money decisions." path="/resources" />
+      <SEO
+        title="Financial Resources | TopMoneyTools"
+        description="A curated collection of all ten TopMoneyTools calculators, ten plain-English guides, and trusted government references for confident money decisions."
+        seoMeta={{
+          url: "https://topmoneytools.com/resources",
+          type: "website",
+        }}
+        structuredData={[breadcrumbSchema]}
+      />
 
       <section className="mx-auto max-w-3xl px-4 py-12 sm:px-6">
         <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-[#A3FFD6]/60">// Intel Brief</p>

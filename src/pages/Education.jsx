@@ -19,9 +19,36 @@ export const ARTICLES = [
 ];
 
 export default function Education() {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://topmoneytools.com",
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Education",
+        "item": "https://topmoneytools.com/education",
+      },
+    ],
+  };
+
   return (
     <Layout>
-      <SEO title="Education Center" description="Plain-English guides from TopMoneyTools on inflation, budgeting, loan terms and credit scores — simple, friendly financial education for everyday life." path="/education" />
+      <SEO
+        title="Education Center | TopMoneyTools"
+        description="Plain-English guides from TopMoneyTools on inflation, budgeting, loan terms and credit scores — simple, friendly financial education for everyday life."
+        seoMeta={{
+          url: "https://topmoneytools.com/education",
+          type: "website",
+        }}
+        structuredData={[breadcrumbSchema]}
+      />
 
       <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6">
         <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-[#A3FFD6]/60">// Intel Brief</p>

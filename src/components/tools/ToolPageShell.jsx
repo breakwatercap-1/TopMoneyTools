@@ -15,9 +15,58 @@ import Reveal from "@/components/Reveal";
 export default function ToolPageShell({
   slug, name, num, title, subtitle, inputs, calculate, results, intelBrief = [], learnMore = [], sidebarTerms, imageUrl, imageAlt, imageCaption,
 }) {
+  const softwareApplicationSchema = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": name,
+    "url": `https://topmoneytools.com/tools/${slug}`,
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "Web",
+    "description": subtitle,
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+    },
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://topmoneytools.com",
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Tools",
+        "item": "https://topmoneytools.com/tools",
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": name,
+        "item": `https://topmoneytools.com/tools/${slug}`,
+      },
+    ],
+  };
+
   return (
     <>
-      <SEO title={name} description={subtitle} path={`/tools/${slug}`} />
+      <SEO 
+        title={name} 
+        description={subtitle} 
+        path={`/tools/${slug}`} 
+        seoMeta={{
+          url: `https://topmoneytools.com/tools/${slug}`,
+          type: "SoftwareApplication"
+        }} 
+        structuredData={[softwareApplicationSchema, breadcrumbSchema]} 
+      />
 
       {/* Top banner ad — integrated "status bar" */}
       <div className="border-b border-[#A3FFD6]/10 bg-obsidian">

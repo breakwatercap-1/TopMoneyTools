@@ -2,7 +2,7 @@ import { useState } from "react";
 import ToolPageShell from "@/components/tools/ToolPageShell";
 import ToolResultBlock from "@/components/tools/ToolResultBlock";
 import Layout from "@/components/Layout";
-import { NumberField, RangeField, CalculateButton, usd } from "@/components/tools/FormControls";
+import { NumberField, CalculateButton, usd } from "@/components/tools/FormControls";
 
 export default function RetirementTool() {
   const [currentAge, setCurrentAge] = useState(30);

@@ -6,11 +6,11 @@ import MoneyBasicsSidebar from "@/components/MoneyBasicsSidebar";
 import Layout from "@/components/Layout";
 
 // Shared shell for all Education articles.
-// props: title, description, path, sidebarTerms, children (article body)
-export default function ArticleShell({ title, description, path, sidebarTerms, relatedTools = [], children }) {
+// props: title, description, path, sidebarTerms, seoMeta, structuredData, children (article body)
+export default function ArticleShell({ title, description, path, sidebarTerms, relatedTools = [], seoMeta, structuredData, children }) {
   return (
     <Layout>
-      <SEO title={title} description={description} path={path} />
+      <SEO title={title} description={description} path={path} seoMeta={seoMeta} structuredData={structuredData} />
 
       <div className="border-b border-[#A3FFD6]/10 bg-obsidian">
         <div className="mx-auto max-w-7xl px-4 py-3 sm:px-6">
