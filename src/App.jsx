@@ -27,6 +27,8 @@ const NetWorth = lazy(() => import("@/pages/tools/net-worth"));
 const SavingsGoal = lazy(() => import("@/pages/tools/savings-goal"));
 const EmergencyFund = lazy(() => import("@/pages/tools/emergency-fund"));
 const SavingsRate = lazy(() => import("@/pages/tools/savings-rate"));
+const InflationImpact = lazy(() => import("@/pages/tools/inflation-impact"));
+const FutureValue = lazy(() => import("@/pages/tools/future-value"));
 
 const HowInflationAffectsYourDailyBudget = lazy(() =>
   import("@/pages/education/HowInflationAffectsYourDailyBudget")
@@ -90,6 +92,8 @@ function App() {
             <Route path="/tools/savings-goal" element={<SavingsGoal />} />
             <Route path="/tools/emergency-fund" element={<EmergencyFund />} />
             <Route path="/tools/savings-rate" element={<SavingsRate />} />
+            <Route path="/tools/inflation-impact" element={<InflationImpact />} />
+            <Route path="/tools/future-value" element={<FutureValue />} />
 
             <Route path="/education" element={<Education />} />
             <Route
