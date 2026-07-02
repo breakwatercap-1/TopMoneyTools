@@ -9,10 +9,11 @@ COPY . .
 RUN npm run build
 
 FROM nginx:alpine
-
-COPY nginx.conf /etc/nginx/conf.d/default.conf
+# Copy the built static assets from the builder stage
 COPY --from=builder /app/dist /usr/share/nginx/html
 
-EXPOSE 8080
+# COPY YOUR CUSTOM NGINX CONFIG
+COPY nginx.conf /etc/nginx/conf.d/default.conf
 
-CMD ["sh", "-c", "sed -i 's/__PORT__/'\"$PORT\"'/g' /etc/nginx/conf.d/default.conf && nginx -g 'daemon off;'"]
+EXPOSE 8080
+CMD ["nginx", "-g", "daemon off;"]
