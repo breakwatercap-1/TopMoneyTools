@@ -22,4 +22,4 @@ CMD echo "=== 🩺 STARTING CONTAINER DIAGNOSTICS ===" && \
     echo "3. Verifying index.html presence:" && \
     (test -f ./dist/index.html && echo "✅ SUCCESS: index.html exists") || echo "❌ ERROR: index.html is MISSING" && \
     echo "=== 🚀 END DIAGNOSTICS - LAUNCHING SERVER ===" && \
-    serve -s dist -l 8080
+    serve -s dist -l 8080 -a 0.0.0.0
